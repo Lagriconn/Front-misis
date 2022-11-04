@@ -1,6 +1,26 @@
+/*Прижатие футера*/
 * {
     margin: 0;
     padding: 0;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.content {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
 }
 
 a {
@@ -9,7 +29,7 @@ a {
 }
 
 body {
-    color: white;
+    color: black;
 }
 
 .menu {
@@ -57,7 +77,6 @@ body {
 }
 
 p {
-    position: absolute;
     right: 30px;
     left: 800px;
     bottom: 300px;
@@ -72,24 +91,63 @@ h1 {
 }
 
 footer {
-    position: absolute;
     bottom: -10px;
 }
 
 .footer {
     flex: 0 0 auto;
 }
-img{
-    position: absolute;
+
+img {
     right: 30px;
     left: 800px;
     bottom: 300px;
 }
-p1{
-    font-family: 'Roboto', sans-serif;
-    position: absolute;
-    right: 30px;
-    left: 800px;
-    bottom: 300px;
+
+.prod {
+    width: 500px;
+    margin: 10px;
 }
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.prod_img {
+    width: 250px;
+    height: 250px;
+}
+
+.prod_img:hover {
+    width: 350px;
+    height: 350px;
+}
+
+
+
+
+/*Цвет фона*/
+body {
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+    height: 100vh;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
